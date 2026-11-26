@@ -59,7 +59,7 @@ export function Remind({ cid }: { cid: string }) {
       </header>
 
       <main className="scroll">
-        <div className="page-ruled" style={{ display: 'grid', gap: 'var(--s-5)', alignContent: 'start' }}>
+        <div className="page-ruled" style={{ display: 'grid', gap: 'var(--s-5)', alignContent: 'start', minHeight: '100%' }}>
         {bal <= 0 ? (
           <p>{t.nothingDue}</p>
         ) : (

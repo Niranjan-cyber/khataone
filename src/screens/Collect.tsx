@@ -1,7 +1,7 @@
 import { ArrowLeft, CircleCheck, CircleX, Banknote, Share2, Ban } from 'lucide-react'
 import { AnimatePresence, motion } from 'motion/react'
 import { QRCodeSVG } from 'qrcode.react'
-import { useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useToast } from '../components/Toast'
 import { useT } from '../lib/i18n'
 import { balanceOf, initials } from '../lib/ledger'
@@ -25,6 +25,11 @@ export function Collect({ cid }: { cid: string }) {
   const [paid, setPaid] = useState<Paise>(0)
   const txId = useRef(newId('tx'))
   const attempt = useRef(0)
+  const statusRef = useRef<HTMLDivElement>(null)
+  // A failed or cancelled payment must be fully in view the moment it happens.
+  useEffect(() => {
+    if (status === 'failed' || status === 'cancelled') statusRef.current?.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
+  }, [status])
 
   const amount: Paise = custom ? rupees(Number(custom)) : Math.max(bal, 0)
   const upi = useMemo(
@@ -130,7 +135,7 @@ export function Collect({ cid }: { cid: string }) {
                 <p className="label" style={{ textAlign: 'center' }}>{t.scanToPay}</p>
               </div>
 
-              <div className={`pay-status s-${status}`} role="status" aria-live="polite">
+              <div ref={statusRef} className={`pay-status s-${status}`} role="status" aria-live="polite" style={{ scrollMarginBottom: 'var(--s-4)' }}>
                 {status === 'pending' && (
                   <>
                     <span className="pulse" aria-hidden /> {t.waiting}

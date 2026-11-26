@@ -61,7 +61,7 @@ export function Picker({ mode }: { mode: 'udhaar' | 'jama' }) {
       </header>
 
       <main className="scroll">
-        <div className="page-ruled" style={{ paddingTop: 0 }}>
+        <div className="page-ruled" style={{ paddingTop: 1, minHeight: '100%' }}>
         {query ? (
           <section aria-label="Search results">
             {matches.length > 0 ? (
