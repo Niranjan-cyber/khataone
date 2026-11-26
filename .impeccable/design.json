@@ -1,0 +1,660 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-26T20:50:57.833Z",
+  "title": "Design System: Bahi",
+  "extensions": {
+    "colorMeta": {
+      "cloth": {
+        "role": "primary",
+        "displayName": "Bookcloth Maroon",
+        "canonical": "#7e1a1a",
+        "oklch": "oklch(39.1% 0.135 26.1)",
+        "tonalRamp": [
+          "#200000",
+          "#460e0d",
+          "#702622",
+          "#9c3f3a",
+          "#c2615a",
+          "#e08a82",
+          "#fcb4ac",
+          "#ffded7"
+        ]
+      },
+      "cloth-deep": {
+        "role": "primary",
+        "displayName": "Deep Bookcloth",
+        "canonical": "#5f1212",
+        "oklch": "oklch(32.1% 0.110 26.0)",
+        "tonalRamp": [
+          "#1d0202",
+          "#411412",
+          "#682d29",
+          "#924842",
+          "#b76962",
+          "#d69089",
+          "#f4b8b2",
+          "#ffe1dc"
+        ]
+      },
+      "cloth-ink": {
+        "role": "primary",
+        "displayName": "Cloth Ink",
+        "canonical": "#fbefd9",
+        "oklch": "oklch(95.6% 0.032 82.8)",
+        "tonalRamp": [
+          "#0e0b05",
+          "#2a241a",
+          "#484133",
+          "#69604e",
+          "#8b816f",
+          "#ada494",
+          "#d0c8bb",
+          "#f4eee3"
+        ]
+      },
+      "cloth-muted": {
+        "role": "primary",
+        "displayName": "Faded Cloth Ink",
+        "canonical": "#ecc9a6",
+        "oklch": "oklch(85.7% 0.061 66.9)",
+        "tonalRamp": [
+          "#130801",
+          "#32210f",
+          "#533d26",
+          "#775b3e",
+          "#9a7c5e",
+          "#baa086",
+          "#dbc5af",
+          "#fdebda"
+        ]
+      },
+      "gold": {
+        "role": "secondary",
+        "displayName": "Turmeric Gold",
+        "canonical": "#e2a11b",
+        "oklch": "oklch(75.2% 0.151 78.4)",
+        "tonalRamp": [
+          "#1b0400",
+          "#3d1b00",
+          "#633600",
+          "#8b5300",
+          "#af7500",
+          "#cd9b46",
+          "#ebc280",
+          "#ffe9b7"
+        ]
+      },
+      "gold-deep": {
+        "role": "secondary",
+        "displayName": "Deep Turmeric",
+        "canonical": "#b97f0c",
+        "oklch": "oklch(64.0% 0.132 76.0)",
+        "tonalRamp": [
+          "#1a0500",
+          "#3b1d00",
+          "#603800",
+          "#885500",
+          "#ac7714",
+          "#ca9c57",
+          "#e9c28b",
+          "#ffe9bf"
+        ]
+      },
+      "udhaar": {
+        "role": "tertiary",
+        "displayName": "Udhaar Red Ink",
+        "canonical": "#9a2d22",
+        "oklch": "oklch(46.3% 0.147 29.5)",
+        "tonalRamp": [
+          "#220000",
+          "#480a06",
+          "#73221a",
+          "#a03c30",
+          "#c65e50",
+          "#e4887a",
+          "#ffb3a6",
+          "#ffddd3"
+        ]
+      },
+      "udhaar-wash": {
+        "role": "tertiary",
+        "displayName": "Udhaar Wash",
+        "canonical": "#f6dcd5",
+        "oklch": "oklch(91.4% 0.030 35.5)",
+        "tonalRamp": [
+          "#110907",
+          "#2e221f",
+          "#4e3e39",
+          "#705c56",
+          "#927d77",
+          "#b3a09b",
+          "#d5c5c1",
+          "#f8ebe8"
+        ]
+      },
+      "jama": {
+        "role": "tertiary",
+        "displayName": "Jama Green Ink",
+        "canonical": "#2f6b45",
+        "oklch": "oklch(47.7% 0.088 153.6)",
+        "tonalRamp": [
+          "#001004",
+          "#0a2d18",
+          "#204d30",
+          "#386f4b",
+          "#5a916b",
+          "#84b291",
+          "#aed4b9",
+          "#d9f8e1"
+        ]
+      },
+      "jama-wash": {
+        "role": "tertiary",
+        "displayName": "Jama Wash",
+        "canonical": "#d9eadc",
+        "oklch": "oklch(92.0% 0.026 150.8)",
+        "tonalRamp": [
+          "#070d08",
+          "#1f2721",
+          "#3a453c",
+          "#58655a",
+          "#78877b",
+          "#9ca99f",
+          "#c2ccc4",
+          "#e9f1ea"
+        ]
+      },
+      "sale": {
+        "role": "tertiary",
+        "displayName": "Sale Indigo",
+        "canonical": "#4b4f7a",
+        "oklch": "oklch(44.3% 0.071 279.0)",
+        "tonalRamp": [
+          "#080919",
+          "#20223b",
+          "#3c3f5f",
+          "#595d86",
+          "#797faa",
+          "#9da2c8",
+          "#c2c7e7",
+          "#e9edff"
+        ]
+      },
+      "warn": {
+        "role": "tertiary",
+        "displayName": "Demo Amber",
+        "canonical": "#8a5a00",
+        "oklch": "oklch(50.8% 0.108 73.3)",
+        "tonalRamp": [
+          "#180600",
+          "#381e00",
+          "#5c3900",
+          "#83570c",
+          "#a67837",
+          "#c59d68",
+          "#e5c398",
+          "#ffeac8"
+        ]
+      },
+      "warn-wash": {
+        "role": "tertiary",
+        "displayName": "Demo Wash",
+        "canonical": "#fbe9bf",
+        "oklch": "oklch(93.8% 0.058 87.6)",
+        "tonalRamp": [
+          "#100a01",
+          "#2d240f",
+          "#4c4125",
+          "#6e603d",
+          "#90815d",
+          "#b1a485",
+          "#d3c8af",
+          "#f7eed9"
+        ]
+      },
+      "page": {
+        "role": "neutral",
+        "displayName": "Ledger Cream",
+        "canonical": "#fbf6ec",
+        "oklch": "oklch(97.4% 0.014 84.6)",
+        "tonalRamp": [
+          "#0d0b08",
+          "#272520",
+          "#45423b",
+          "#656159",
+          "#86827a",
+          "#a8a59d",
+          "#ccc9c3",
+          "#f1eee9"
+        ]
+      },
+      "page-2": {
+        "role": "neutral",
+        "displayName": "Worn Page",
+        "canonical": "#f4ecdc",
+        "oklch": "oklch(94.5% 0.023 84.6)",
+        "tonalRamp": [
+          "#0d0b06",
+          "#28251d",
+          "#464137",
+          "#676054",
+          "#888274",
+          "#aaa499",
+          "#cdc9bf",
+          "#f2eee6"
+        ]
+      },
+      "paper-white": {
+        "role": "neutral",
+        "displayName": "Paper White",
+        "canonical": "#fffdf8",
+        "oklch": "oklch(99.4% 0.007 88.6)",
+        "tonalRamp": [
+          "#0c0b0a",
+          "#262523",
+          "#43423f",
+          "#63615d",
+          "#84827e",
+          "#a6a5a1",
+          "#cac9c6",
+          "#efeeec"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline Rule",
+        "canonical": "#e6d9c4",
+        "oklch": "oklch(89.0% 0.032 79.9)",
+        "tonalRamp": [
+          "#0f0a05",
+          "#2a241a",
+          "#494133",
+          "#6a604f",
+          "#8c816f",
+          "#ada494",
+          "#d0c8bb",
+          "#f4eee3"
+        ]
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Strong Rule",
+        "canonical": "#cdbba2",
+        "oklch": "oklch(80.1% 0.040 76.1)",
+        "tonalRamp": [
+          "#100a03",
+          "#2c2317",
+          "#4c402f",
+          "#6e5f4a",
+          "#8f806a",
+          "#b1a390",
+          "#d3c7b7",
+          "#f6ede0"
+        ]
+      },
+      "margin-red": {
+        "role": "neutral",
+        "displayName": "Margin Red",
+        "canonical": "#c95a4a",
+        "oklch": "oklch(60.3% 0.145 30.2)",
+        "tonalRamp": [
+          "#210000",
+          "#480b05",
+          "#722319",
+          "#9f3c2f",
+          "#c65f50",
+          "#e3897a",
+          "#ffb3a5",
+          "#ffded2"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1f1a17",
+        "oklch": "oklch(22.3% 0.010 53.0)",
+        "tonalRamp": [
+          "#0d0b09",
+          "#282422",
+          "#45413e",
+          "#66605c",
+          "#87817d",
+          "#a9a4a1",
+          "#cdc8c5",
+          "#f1eeeb"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Ink 2",
+        "canonical": "#5e5148",
+        "oklch": "oklch(44.5% 0.023 56.8)",
+        "tonalRamp": [
+          "#0f0a07",
+          "#2b231e",
+          "#4a4039",
+          "#6b5e56",
+          "#8d7f76",
+          "#aea39b",
+          "#d1c7c0",
+          "#f5ede7"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Ink 3",
+        "canonical": "#75685d",
+        "oklch": "oklch(52.6% 0.024 62.5)",
+        "tonalRamp": [
+          "#0f0a07",
+          "#2a241e",
+          "#494038",
+          "#6b5f55",
+          "#8c8075",
+          "#aea39a",
+          "#d1c7bf",
+          "#f4ede7"
+        ]
+      },
+      "focus": {
+        "role": "neutral",
+        "displayName": "Focus Blue",
+        "canonical": "#1d5fd1",
+        "oklch": "oklch(51.5% 0.188 260.8)",
+        "tonalRamp": [
+          "#000431",
+          "#001e5e",
+          "#093b8e",
+          "#1e5ac2",
+          "#417ee9",
+          "#6ea4ff",
+          "#9ccaff",
+          "#cbf0ff"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "amount-xl": {
+        "displayName": "Amount XL",
+        "purpose": "The amount being typed on the entry screen."
+      },
+      "amount-lg": {
+        "displayName": "Amount LG",
+        "purpose": "Total baaki on Home."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Shop name in local script, split figures, payment result."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Screen and sheet titles, row amounts."
+      },
+      "section": {
+        "displayName": "Section",
+        "purpose": "Section headings on the ledger page."
+      },
+      "body-lg": {
+        "displayName": "Body Large",
+        "purpose": "Customer names, button and chip labels."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default UI text, ledger notes, reminder message."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Field labels, day headers, subtitles."
+      },
+      "tag": {
+        "displayName": "Tag",
+        "purpose": "UDHAAR / JAMA / SALE direction tags and DEMO; uppercase."
+      },
+      "keypad": {
+        "displayName": "Keypad",
+        "purpose": "Keypad digits; Hind, because Martel numerals render old-style on keys."
+      }
+    },
+    "shadows": [
+      {
+        "name": "sheet",
+        "value": "0 -8px 30px rgba(55, 20, 10, 0.18)",
+        "purpose": "Bottom sheets rising over the page."
+      },
+      {
+        "name": "toast",
+        "value": "0 8px 24px rgba(31, 26, 23, 0.28)",
+        "purpose": "Saved-entry toast with Undo."
+      },
+      {
+        "name": "bubble",
+        "value": "0 1px 1px rgba(31, 26, 23, 0.08)",
+        "purpose": "Reminder message preview."
+      },
+      {
+        "name": "primary-lip",
+        "value": "inset 0 -3px 0 #e2a11b",
+        "purpose": "Gold lip on the single primary button; echoes the header's gold double rule."
+      },
+      {
+        "name": "phone-frame",
+        "value": "0 0 0 1px rgba(255,255,255,0.08), 0 30px 70px rgba(30,6,4,0.55), 0 8px 18px rgba(30,6,4,0.35)",
+        "purpose": "Desktop presentation only: the phone resting on the cloth."
+      }
+    ],
+    "motion": [
+      {
+        "name": "d-press",
+        "value": "90ms",
+        "purpose": "Press feedback (scale/translate)."
+      },
+      {
+        "name": "d-fast",
+        "value": "160ms",
+        "purpose": "Hover and background changes."
+      },
+      {
+        "name": "d-mid",
+        "value": "240ms",
+        "purpose": "Status and QR dim transitions."
+      },
+      {
+        "name": "d-slow",
+        "value": "380ms",
+        "purpose": "Slow transitions."
+      },
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Default easing; also the ink-in reveal, digit roll and sheet slide."
+      },
+      {
+        "name": "ease-in-out",
+        "value": "cubic-bezier(0.65, 0, 0.35, 1)",
+        "purpose": "Looping pulse while waiting for payment."
+      },
+      {
+        "name": "ink-in",
+        "value": "clip-path inset(0 100% 0 0) to inset(0 0 0 0), 260ms, 200ms delay",
+        "purpose": "Signature: a saved entry's balance inks onto its line left to right."
+      },
+      {
+        "name": "digit-roll",
+        "value": "260ms per digit, 15ms stagger, y 60%",
+        "purpose": "Balance digits roll in fixed cells; layout never reflows."
+      },
+      {
+        "name": "sheet-slide",
+        "value": "280ms translateY(100%) to 0",
+        "purpose": "Bottom sheet entrance."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "all animation and transition durations 1ms",
+        "purpose": "prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrow",
+        "value": "max-width: 359px"
+      },
+      {
+        "name": "short",
+        "value": "max-height: 700px"
+      },
+      {
+        "name": "desktop-collapse",
+        "value": "max-width: 1240px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button (lipped)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one most important action per screen (Add udhaar, Save). The only button with the gold lip.",
+      "html": "<button class=\"ds-btn-primary\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.75\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5v14\"/></svg>उधार लिखें · Add udhaar</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 60px; padding: 0 16px; width: 100%; border: 0; border-radius: 10px; background: var(--cloth, #7e1a1a); color: var(--cloth-ink, #fbefd9); font-family: var(--f-sans, 'Hind', sans-serif); font-weight: 700; font-size: 1.3125rem; box-shadow: inset 0 -3px 0 var(--gold, #e2a11b); cursor: pointer; transition: transform 90ms cubic-bezier(0.22,1,0.36,1), background 160ms cubic-bezier(0.22,1,0.36,1); } .ds-btn-primary:hover { background: var(--cloth-deep, #5f1212); } .ds-btn-primary:active { transform: translateY(1px) scale(0.985); } .ds-btn-primary:focus-visible { outline: 3px solid var(--focus, #1d5fd1); outline-offset: 2px; }"
+    },
+    {
+      "name": "Jama Button",
+      "kind": "button",
+      "refersTo": "button-jama",
+      "description": "Save for a payment received. Flat green, no lip.",
+      "html": "<button class=\"ds-btn-jama\">Save jama ₹500</button>",
+      "css": ".ds-btn-jama { display: inline-flex; align-items: center; justify-content: center; min-height: 60px; padding: 0 16px; width: 100%; border: 0; border-radius: 10px; background: var(--jama, #2f6b45); color: #f4faf5; font-family: var(--f-sans, 'Hind', sans-serif); font-weight: 700; font-size: 1.3125rem; cursor: pointer; transition: transform 90ms cubic-bezier(0.22,1,0.36,1), background 160ms; } .ds-btn-jama:hover { background: #265a39; } .ds-btn-jama:active { transform: translateY(1px) scale(0.985); } .ds-btn-jama:focus-visible { outline: 3px solid var(--focus, #1d5fd1); outline-offset: 2px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary dock actions (Sale, Received).",
+      "html": "<button class=\"ds-btn-outline\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M17 7 7 17M17 17H7V7\"/></svg>Received</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 16px; border: 1.5px solid var(--cloth, #7e1a1a); border-radius: 10px; background: var(--page, #fbf6ec); color: var(--cloth, #7e1a1a); font-family: var(--f-sans, 'Hind', sans-serif); font-weight: 700; font-size: 1.125rem; cursor: pointer; transition: transform 90ms, background 160ms; } .ds-btn-outline:hover { background: var(--page-2, #f4ecdc); } .ds-btn-outline:active { transform: translateY(1px) scale(0.985); } .ds-btn-outline:focus-visible { outline: 3px solid var(--focus, #1d5fd1); outline-offset: 2px; }"
+    },
+    {
+      "name": "Quick-amount Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Pill chips for recent amounts and filters; selected fills maroon.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip\">₹50</button><button class=\"ds-chip\" aria-pressed=\"true\">₹100</button><button class=\"ds-chip\">₹250</button></div>",
+      "css": ".ds-chips { display: flex; gap: 8px; } .ds-chip { min-height: 48px; padding: 0 16px; border-radius: 999px; border: 1.5px solid var(--rule-strong, #cdbba2); background: var(--page, #fbf6ec); color: var(--ink, #1f1a17); font-family: var(--f-sans, 'Hind', sans-serif); font-weight: 600; font-size: 1rem; font-variant-numeric: tabular-nums lining-nums; cursor: pointer; transition: background 160ms, border-color 160ms, transform 90ms; } .ds-chip:active { transform: scale(0.95); } .ds-chip[aria-pressed='true'] { background: var(--cloth, #7e1a1a); border-color: var(--cloth, #7e1a1a); color: var(--cloth-ink, #fbefd9); } .ds-chip:focus-visible { outline: 3px solid var(--focus, #1d5fd1); outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Writable paper field: notes, customer search.",
+      "html": "<input class=\"ds-input\" placeholder=\"Search customer\" />",
+      "css": ".ds-input { min-height: 52px; width: 100%; padding: 0 16px; border: 1.5px solid var(--rule-strong, #cdbba2); border-radius: 10px; background: #fffdf8; color: var(--ink, #1f1a17); font-family: var(--f-sans, 'Hind', sans-serif); font-size: 1.125rem; } .ds-input::placeholder { color: var(--ink-3, #75685d); } .ds-input:focus { outline: none; border-color: var(--cloth, #7e1a1a); box-shadow: 0 0 0 3px rgba(126,26,26,0.15); }"
+    },
+    {
+      "name": "Cloth Header",
+      "kind": "nav",
+      "refersTo": "header",
+      "description": "Woven maroon band atop every screen, closed by the gold double rule.",
+      "html": "<header class=\"ds-cloth\"><div class=\"ds-cloth-local\">श्री गणेश किराना</div><div class=\"ds-cloth-en\">Shree Ganesh Kirana</div></header>",
+      "css": ".ds-cloth { background-color: var(--cloth, #7e1a1a); background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.035) 0 2px, transparent 2px 5px), repeating-linear-gradient(-45deg, rgba(0,0,0,0.05) 0 1px, transparent 1px 4px); color: var(--cloth-ink, #fbefd9); padding: 18px 20px 16px; border-bottom: 6px double var(--gold, #e2a11b); } .ds-cloth-local { font-family: var(--f-serif, 'Martel', serif); font-weight: 800; font-size: 1.625rem; line-height: 1.25; } .ds-cloth-en { font-family: var(--f-sans, 'Hind', sans-serif); font-size: 0.875rem; color: var(--cloth-muted, #ecc9a6); }"
+    },
+    {
+      "name": "Customer Row on the Ledger Page",
+      "kind": "custom",
+      "refersTo": "ledger-row",
+      "description": "Ruled row on cream paper beside the red double margin rule; amount in direction ink with word and arrow.",
+      "html": "<div class=\"ds-page\"><button class=\"ds-row\"><span class=\"ds-mono\">SK</span><span class=\"ds-name\">Suresh Kumar<small>Yesterday</small></span><span class=\"ds-amt\">₹1,250<small><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg> UDHAAR</small></span></button></div>",
+      "css": ".ds-page { position: relative; background: var(--page, #fbf6ec); padding: 8px 20px 8px 52px; } .ds-page::before { content: ''; position: absolute; left: 34px; top: 0; bottom: 0; border-left: 2px solid var(--margin-red, #c95a4a); box-shadow: 4px 0 0 var(--page, #fbf6ec), 6px 0 0 var(--margin-red, #c95a4a); opacity: 0.85; } .ds-row { width: 100%; display: grid; grid-template-columns: 44px 1fr auto; gap: 12px; align-items: center; min-height: 64px; padding: 8px 0; border: 0; border-bottom: 1px solid var(--rule, #e6d9c4); background: none; text-align: left; cursor: pointer; transition: background 160ms; } .ds-row:hover { background: var(--page-2, #f4ecdc); } .ds-row:active { background: var(--rule, #e6d9c4); } .ds-row:focus-visible { outline: 3px solid var(--focus, #1d5fd1); outline-offset: 2px; } .ds-mono { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 6px; background: var(--page-2, #f4ecdc); border: 1px solid var(--rule-strong, #cdbba2); color: var(--cloth, #7e1a1a); font-family: var(--f-serif, 'Martel', serif); font-weight: 800; } .ds-name { font-family: var(--f-sans, 'Hind', sans-serif); font-size: 1.125rem; font-weight: 600; line-height: 1.25; color: var(--ink, #1f1a17); } .ds-name small { display: block; font-size: 0.875rem; font-weight: 500; color: var(--ink-3, #75685d); } .ds-amt { text-align: right; font-family: var(--f-serif, 'Martel', serif); font-weight: 800; font-size: 1.3125rem; color: var(--udhaar, #9a2d22); font-variant-numeric: tabular-nums lining-nums; } .ds-amt small { display: flex; justify-content: flex-end; align-items: center; gap: 3px; font-family: var(--f-sans, 'Hind', sans-serif); font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.04em; }"
+    },
+    {
+      "name": "Saved-entry Toast",
+      "kind": "custom",
+      "refersTo": "toast",
+      "description": "Woven cloth strip with gold double rule, gold UNDO and draining timer.",
+      "html": "<div class=\"ds-toast\"><div class=\"ds-toast-body\"><b>₹250 udhaar for Suresh</b><span>New baaki ₹1,500</span></div><button class=\"ds-toast-undo\">Undo</button><i class=\"ds-toast-timer\"></i></div>",
+      "css": ".ds-toast { position: relative; display: flex; align-items: center; gap: 12px; min-height: 64px; padding: 8px 8px 8px 16px; overflow: hidden; background-color: var(--cloth, #7e1a1a); background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.035) 0 2px, transparent 2px 5px), repeating-linear-gradient(-45deg, rgba(0,0,0,0.05) 0 1px, transparent 1px 4px); color: var(--cloth-ink, #fbefd9); border-top: 5px double var(--gold, #e2a11b); border-radius: 6px; box-shadow: 0 8px 24px rgba(31,26,23,0.28); font-family: var(--f-sans, 'Hind', sans-serif); } .ds-toast-body { flex: 1; line-height: 1.3; } .ds-toast-body b { display: block; font-weight: 600; } .ds-toast-body span { font-size: 0.875rem; color: var(--cloth-muted, #ecc9a6); } .ds-toast-undo { min-height: 48px; padding: 0 16px; border: 0; border-radius: 6px; background: none; color: var(--gold, #e2a11b); font: inherit; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; cursor: pointer; } .ds-toast-undo:hover { background: rgba(255,255,255,0.08); } .ds-toast-undo:focus-visible { outline: 3px solid var(--focus, #1d5fd1); outline-offset: 2px; } .ds-toast-timer { position: absolute; left: 0; bottom: 0; height: 3px; width: 60%; background: var(--gold, #e2a11b); }"
+    },
+    {
+      "name": "DEMO Badge",
+      "kind": "chip",
+      "refersTo": "demo-badge",
+      "description": "Marks every simulated payment and message element.",
+      "html": "<span class=\"ds-demo\">DEMO</span>",
+      "css": ".ds-demo { display: inline-flex; align-items: center; height: 24px; padding: 0 8px; border-radius: 6px; background: var(--warn-wash, #fbe9bf); color: var(--warn, #8a5a00); border: 1px solid #e7c779; font-family: var(--f-sans, 'Hind', sans-serif); font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.06em; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Red-Cloth Bahi, Open on the Counter",
+    "overview": "Every screen is a spread of the shopkeeper's own account book. The top of the screen is the book's maroon bookcloth cover, woven and closed off by a turmeric-gold double rule like a binding stitch. Below it lies the warm ledger page: cream paper, a red double margin rule down the left, and hairline ruled lines in place of cards. Money is written on the page in a heavy Devanagari-Latin serif with tabular figures. Interface words are set in a plain, sturdy Hindi-Latin sans. The world deliberately rejects the category default of a blue app bar, a white card stack and a floating add button.\n\nDensity is a counter tool, not a dashboard: rows are 64px tall, every target is at least 48px, and the frequent actions sit in a bottom dock within thumb reach. Colour carries meaning only alongside a word and an arrow. Depth is mostly material (cloth and paper, rules and margins); shadows are kept for the few things that float above the page.\n\nMotion is the act of writing. A saved entry inks onto its line with a left-to-right clip reveal (260ms), balance digits roll into fixed cells so nothing reflows, and the changed balance stays highlighted like a fresh pen mark until the next tap.",
+    "keyCharacteristics": [
+      "Maroon woven bookcloth header on every screen, closed by a gold double rule.",
+      "Cream ledger page with a red double margin rule and hairline ruled rows; no cards.",
+      "Martel 800–900 for amounts, names-as-headings and screen titles; Hind for all UI text.",
+      "Money direction is always word + arrow icon + ink colour (UDHAAR red ↗, JAMA green ↙).",
+      "One strict tabular numeral grid for all money; digits sit in fixed cells and never reflow.",
+      "Everything frequent lives in the bottom dock; a single lipped maroon primary button.",
+      "Every simulated payment and message element carries a DEMO badge."
+    ],
+    "rules": [
+      {
+        "name": "The Word-Arrow-Ink Rule",
+        "body": "Udhaar and jama are never colour alone: red ink always arrives with the word UDHAAR and an arrow-up-right, green ink with JAMA and an arrow-down-left. A red or green figure without its word is a defect.",
+        "section": "colors"
+      },
+      {
+        "name": "The Gold Is Binding Rule",
+        "body": "Gold appears only as the book's binding: double rules, the primary button's lip, and marks of a fresh entry. It is never a fill, a background or a body-text colour on the page.",
+        "section": "colors"
+      },
+      {
+        "name": "The Cloth Owns Regions Rule",
+        "body": "Maroon fills whole bands (header, toast, primary action), not small decorative accents scattered over the page.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Ledger Rule",
+        "body": "Every money figure uses tabular, lining numerals (`tnum`, `lnum`) and sits in a fixed-width cell grid; a balance changing value must never shift the layout around it.",
+        "section": "typography"
+      },
+      {
+        "name": "The Keypad Speaks Hind Rule",
+        "body": "Keypad digits are Hind 600 at 1.875rem, not Martel. Martel's numerals render old-style at key size and read as uneven; the keys are interface, the amount above them is ink.",
+        "section": "typography"
+      },
+      {
+        "name": "The Ink Is Serif Rule",
+        "body": "Martel is for things written in the book (amounts, names as headings, titles). Interface text, labels, buttons and tags are Hind.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Page Rule",
+        "body": "Nothing on the ledger page casts a shadow. Grouping is done with ruled lines, the margin rule and whitespace; a shadowed card on the page breaks the book.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Double-Rule Binding Rule",
+        "body": "Every boundary between cloth and page, and every surface that rises over the page, is closed by a double rule: 6px gold under the header, 5px gold on top of sheets and toasts, and a 4px strong-rule double line on top of the dock.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do open every screen with the woven maroon cloth band closed by the 6px gold double rule.",
+      "Do put content on the cream page as ruled rows (1px Hairline Rule dividers, 64px minimum) with the red double margin rule at the left.",
+      "Do show money direction as word + arrow + ink every time: UDHAAR in red with arrow-up-right, JAMA in green with arrow-down-left.",
+      "Do set every money figure in Martel with tabular lining numerals, in fixed cells that never reflow.",
+      "Do keep keypad digits in Hind 600, and leave the margin rule off the entry screen so the keypad spans the full width.",
+      "Do keep the 3px gold inset lip for the single primary maroon button; every other button is flat.",
+      "Do mark every simulated payment or message element with the DEMO badge.",
+      "Do keep every touch target at least 48px (60px for the primary action) and place frequent actions in the bottom dock.",
+      "Do close sheets and toasts with the gold double rule, and the dock with the strong-rule double line."
+    ],
+    "donts": [
+      "Don't use a blue app bar, a white card stack or a floating add button: the category default this world exists to refuse.",
+      "Don't put shadowed cards on the ledger page; shadows belong only to sheets, toasts and the reminder bubble.",
+      "Don't put a gold lip on any button other than the primary, including the Jama save button.",
+      "Don't use red or green ink without its word and arrow, or use them decoratively.",
+      "Don't use gold as a fill or a body-text colour on the cream page.",
+      "Don't confirm with dialogs; record, then offer Undo in the toast."
+    ]
+  }
+}

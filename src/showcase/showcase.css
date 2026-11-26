@@ -257,3 +257,20 @@
     grid-column: 1 / -1;
   }
 }
+
+.sc-case {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: 20px;
+  padding: 0 16px;
+  border-radius: var(--r-md);
+  background: var(--page);
+  color: var(--cloth);
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: inset 0 -3px 0 var(--gold);
+}
+.sc-case:hover {
+  background: #fff;
+}

@@ -1,6 +1,6 @@
 import { AnimatePresence, motion, MotionConfig } from 'motion/react'
 import { useEffect, useState } from 'react'
-import { ToastProvider } from './components/Toast'
+import { ToastProvider, useToast } from './components/Toast'
 import { I18nProvider, useT } from './lib/i18n'
 import { RouterProvider, toHash, useRouter, type Route } from './lib/router'
 import { Collect } from './screens/Collect'
@@ -49,6 +49,12 @@ export function PhoneApp() {
   const { route, dir } = useRouter()
   const { t } = useT()
   const online = useOnline()
+  const { dismiss } = useToast()
+  // An Undo belongs to the screen it was offered on: moving forward to a new task clears it.
+  useEffect(() => {
+    if (dir > 0) dismiss()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [route])
   return (
     <div className="app">
       {!online && <div className="offline">{t.offline}</div>}

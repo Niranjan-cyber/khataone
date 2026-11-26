@@ -13,6 +13,7 @@ interface ToastData {
 
 interface ToastCtx {
   show: (t: Omit<ToastData, 'id'>) => void
+  dismiss: () => void
   held: string | null
 }
 const Ctx = createContext<ToastCtx | null>(null)
@@ -44,7 +45,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
   }, [held])
 
   return (
-    <Ctx.Provider value={{ show, held }}>
+    <Ctx.Provider value={{ show, held, dismiss: () => setToast(null) }}>
       {children}
       <ToastView toast={toast} onClose={() => setToast(null)} />
     </Ctx.Provider>

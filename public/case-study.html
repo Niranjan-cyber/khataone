@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bahi · case study · Pixelcraft 2026 DS-03</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Martel:wght@700;800;900&display=swap" rel="stylesheet" />
+<style>
+  :root { --cloth:#7e1a1a; --gold:#e2a11b; --page:#fbf6ec; --ink:#1f1a17; --ink2:#5e5148; --rule:#e6d9c4; --udhaar:#9a2d22; --jama:#2f6b45; }
+  * { box-sizing: border-box; margin: 0; }
+  body { font-family: Hind, system-ui, sans-serif; color: var(--ink); background: #e9e1d2; font-size: 9.3pt; line-height: 1.3; }
+  .sheet { width: 210mm; min-height: 297mm; margin: 24px auto; background: var(--page); box-shadow: 0 10px 40px rgba(60,20,10,.18); }
+  header { background: var(--cloth); color: #fbefd9; padding: 7mm 14mm 5mm; border-bottom: 6px double var(--gold);
+    background-image: repeating-linear-gradient(45deg, rgba(255,255,255,.035) 0 2px, transparent 2px 5px); }
+  .brand { font-family: Martel, serif; font-weight: 800; font-size: 11pt; letter-spacing: .02em; color: #ecc9a6; }
+  .brand b { color: var(--gold); }
+  h1 { font-family: Martel, serif; font-weight: 900; font-size: 20pt; line-height: 1.08; margin-top: 2mm; }
+  h1 em { font-style: normal; color: var(--gold); }
+  .sub { margin-top: 3mm; color: #ecc9a6; max-width: 150mm; }
+  .links { margin-top: 3mm; font-size: 9.5pt; color: #fbefd9; }
+  .links a { color: var(--gold); }
+  main { padding: 4mm 14mm 2mm 20mm; position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 3mm 9mm; }
+  main::before { content: ""; position: absolute; left: 11mm; top: 0; bottom: 0; border-left: 1.5px solid #c95a4a; box-shadow: 3px 0 0 var(--page), 4.5px 0 0 #c95a4a; }
+  h2 { font-family: Martel, serif; font-size: 11.5pt; font-weight: 800; color: var(--cloth); border-bottom: 1px solid var(--rule); padding-bottom: 1mm; margin-bottom: 1.6mm; }
+  .full { grid-column: 1 / -1; }
+  ul { padding-left: 4.5mm; } li { margin: .3mm 0; }
+  .flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2mm; margin-top: 1mm; }
+  .step { border-top: 3px solid var(--cloth); padding-top: 1.4mm; font-size: 9.4pt; }
+  .step b { font-family: Martel, serif; font-size: 13pt; display: block; line-height: 1.1; }
+  .tag { font-weight: 700; font-size: 8.4pt; letter-spacing: .04em; }
+  .u { color: var(--udhaar); } .j { color: var(--jama); }
+  table { width: 100%; border-collapse: collapse; font-size: 9.2pt; }
+  td, th { text-align: left; padding: .9mm 1.2mm; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th { font-weight: 700; color: var(--ink2); }
+  .note { font-size: 8.6pt; color: var(--ink2); }
+  .sw { display: inline-block; width: 9px; height: 9px; border-radius: 2px; vertical-align: -1px; margin-right: 3px; }
+  @media print { body { background: none; } .sheet { margin: 0; box-shadow: none; } @page { size: A4; margin: 0; } }
+</style>
+</head>
+<body>
+<article class="sheet">
+  <header>
+    <p class="brand">Bahi <b>बही</b> · Pixelcraft 2026 · DS-03 · Round 1 case study</p>
+    <h1>Udhaar in one thumb.<br />Less time on <em>hisaab</em>, more time on <em>dukaan</em>.</h1>
+    <p class="sub">A digital khata for kirana shopkeepers: credit and sales, a ledger per customer, polite reminders and UPI collection. Designed for one hand, behind a busy counter, on a budget Android phone.</p>
+    <p class="links">Live prototype: <a href="https://bahi-kirana.vercel.app">bahi-kirana.vercel.app</a> · Code: <a href="https://github.com/Niranjan-cyber/khataone">github.com/Niranjan-cyber/khataone</a></p>
+  </header>
+  <main>
+    <section>
+      <h2>The problem</h2>
+      <p>A regular says <i>“Bhaiya, ₹250 khate mein daal dena”</i> and walks away. The shopkeeper is serving others, goods or cash in one hand. Paper is fast but cannot remind or take UPI. Apps can, but one entry usually means: open customer → find the button → fill a form.</p>
+    </section>
+    <section>
+      <h2>Who it is for</h2>
+      <ul>
+        <li>Kirana owners, many older or new to smartphones, most comfortable in Hindi or Marathi.</li>
+        <li>Budget Android phones, patchy internet, bright counters, interruptions.</li>
+        <li>Customers they know by name: the relationship matters more than the money.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>What we learned (desk research only)</h2>
+      <ul>
+        <li>Store listings show OkCredit, Khatabook and PhoneKhata already offer ledgers, reminders and UPI. The gap is <b>speed during service</b>, not features.</li>
+        <li>One-handed use: frequent actions belong in the bottom half (thumb zone); targets ≥ 48 px.</li>
+        <li>Low literacy: recognition over recall (faces, names, usual amounts), words next to icons.</li>
+      </ul>
+      <p class="note">Hypotheses from public listings and HCI guidance. No shopkeeper interviews were possible before this round.</p>
+    </section>
+    <section>
+      <h2>Key design decisions</h2>
+      <ul>
+        <li><b>Customer first, then amount.</b> Recent customers sit on Home; the keypad opens already addressed to them.</li>
+        <li><b>Undo, not “Are you sure?”</b> The button repeats the amount (“Save ₹250 udhaar”); a 6 s Undo follows.</li>
+        <li><b>Never colour alone.</b> <span class="tag u">↗ UDHAAR</span> / <span class="tag j">↙ JAMA</span>: word + arrow + colour + running balance.</li>
+        <li><b>Wrong entries are struck through, never deleted</b>, so the khata stays trustworthy.</li>
+      </ul>
+    </section>
+
+    <section class="full">
+      <h2>The critical flow: ₹250 udhaar from the home screen, 5 taps</h2>
+      <div class="flow">
+        <div class="step"><b>1 tap</b>“Suresh Patil” in recent customers</div>
+        <div class="step"><b>2 5 0</b>Big keypad; live preview “Baaki ₹1,000 → ₹1,250”</div>
+        <div class="step"><b>1 tap</b>“Save ₹250 udhaar”; double taps write one entry</div>
+        <div class="step"><b>Back home</b>Total rolls to the new figure; changed balance stays marked until seen</div>
+        <div class="step"><b>Undo</b>6 s, one tap, exact reversal</div>
+      </div>
+      <p class="note" style="margin-top:1mm">New customer: “Add udhaar” → search or create by name → same keypad. Ledger, reminder and UPI collect are one tap from each customer.</p>
+    </section>
+
+    <section>
+      <h2>Visual identity</h2>
+      <p>The red-cloth <i>bahi-khata</i> opened at Diwali, made digital: maroon bookcloth with a gold double rule, a ledger page with a red margin, ruled rows instead of cards. Martel for money and names, Hind for interface text.
+      <br /><span class="sw" style="background:#7e1a1a"></span>cloth <span class="sw" style="background:#e2a11b"></span>gold <span class="sw" style="background:#fbf6ec;border:1px solid #ccc"></span>page <span class="sw" style="background:#9a2d22"></span>udhaar <span class="sw" style="background:#2f6b45"></span>jama</p>
+      <p class="note">Risk handled: red is the brand colour and also means “owed”, so meaning is always carried by the word and arrow too.</p>
+    </section>
+    <section>
+      <h2>Accessibility &amp; inclusion</h2>
+      <ul>
+        <li>Full English, Hindi and Marathi; reminder language chosen separately from app language.</li>
+        <li>Amounts 60–88 px; body ≥ 16 px; targets ≥ 48 px; works at 320 px wide.</li>
+        <li>Screen-reader labels, focus rings, keyboard entry, reduced motion; works offline.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Validation so far</h2>
+      <table>
+        <tr><th>Check</th><th>Result</th></tr>
+        <tr><td>Ledger maths unit tests</td><td>11 / 11 pass</td></tr>
+        <tr><td>End-to-end flows (undo, reload, UPI fail → retry)</td><td>7 / 7 pass</td></tr>
+        <tr><td>axe-core WCAG 2.2 AA, six screens</td><td>0 serious</td></tr>
+        <tr><td>Independent design review</td><td>11 found, all fixed</td></tr>
+        <tr><td>Timed tests with real shopkeepers</td><td><b>Not done yet</b></td></tr>
+      </table>
+      <p class="note">Under 10 s is a design target (5 taps), not a measured human result.</p>
+    </section>
+    <section>
+      <h2>Limitations &amp; next steps</h2>
+      <ul>
+        <li>UPI, payment links and messaging are <b>simulated</b> and marked DEMO; production needs a payment provider with server-side confirmation.</li>
+        <li>Next: time 5–8 shopkeepers (median, range, % under 10 s), Hindi/Marathi copy review by native speakers, cloud backup.</li>
+      </ul>
+      <p class="note"><b>AI use (rule 5):</b> Claude (Anthropic) was used for research synthesis, code, copy drafts and automated design critique (Impeccable, Taste Skill). Direction choice and decisions were made by the entrant. Icons: Lucide (ISC). Fonts: Martel, Hind (SIL OFL). All names and numbers are fictional.</p>
+    </section>
+  </main>
+</article>
+</body>
+</html>

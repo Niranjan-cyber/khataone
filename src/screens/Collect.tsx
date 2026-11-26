@@ -65,7 +65,7 @@ export function Collect({ cid }: { cid: string }) {
           <div>
             <h1 className="cloth-title">{t.collectTitle}</h1>
             <p className="cloth-sub num">
-              {c.name} · {t.baaki} {formatINR(bal + (status === 'success' ? paid : 0))}
+              {c.name} · {t.baaki} {formatINR(bal)}
             </p>
           </div>
           <span className="demo-badge" style={{ marginLeft: 'auto' }}>
@@ -75,7 +75,7 @@ export function Collect({ cid }: { cid: string }) {
       </header>
 
       <main className="scroll">
-        <div className="page-ruled" style={{ display: 'grid', gap: 'var(--s-5)', alignContent: 'start' }}>
+        <div className="page-ruled" style={{ display: 'grid', gap: 'var(--s-5)', alignContent: 'start', minHeight: '100%' }}>
         <AnimatePresence mode="wait" initial={false}>
           {status === 'success' ? (
             <motion.section
