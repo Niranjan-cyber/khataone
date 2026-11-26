@@ -910,3 +910,61 @@ button.row:active {
 .khata-btn:hover {
   background: var(--page-2);
 }
+
+@media (max-width: 359px) {
+  :root {
+    --gutter: 14px;
+  }
+  .page-ruled {
+    padding-left: 40px;
+  }
+  .page-ruled::before {
+    left: 24px;
+  }
+  .row {
+    grid-template-columns: 36px 1fr auto;
+    gap: var(--s-2);
+  }
+  .mono-tile {
+    width: 36px;
+    height: 36px;
+    font-size: var(--t-sm);
+  }
+  .row-amt {
+    font-size: var(--t-lg);
+  }
+  .khata-btn {
+    width: 48px;
+    margin-left: var(--s-1);
+  }
+  .amount-lg {
+    font-size: 3rem;
+  }
+}
+
+/* Short phones (≤ 700px tall): keep the whole keypad and the save button on one screen. */
+@media (max-height: 700px) {
+  .entry-amount {
+    padding-top: var(--s-2);
+  }
+  .entry-figure {
+    font-size: 3.75rem !important;
+  }
+  .entry-preview {
+    margin-top: var(--s-1);
+  }
+  .entry-tools {
+    padding-top: var(--s-2);
+    gap: var(--s-1);
+  }
+  .quick .chip {
+    min-height: 44px;
+  }
+  .key {
+    height: 48px;
+  }
+  .cloth {
+    padding-top: calc(var(--safe-t) + 10px);
+    padding-bottom: var(--s-3);
+  }
+}

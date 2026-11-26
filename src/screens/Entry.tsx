@@ -103,7 +103,7 @@ export function Entry({ mode, cid }: { mode: 'udhaar' | 'jama' | 'sale'; cid?: s
       <main className="entry">
         <div className="entry-amount">
           <p className="label">{label}</p>
-          <output className={`entry-figure serif num ${amount === 0 ? 'is-empty' : ''} entry-${mode}`} aria-live="polite" data-testid="amount">
+          <output className={`entry-figure serif num ${amount === 0 ? 'is-empty' : ''} entry-${mode}`} aria-live="polite" data-testid="amount" style={{ fontSize: buf.length >= 6 ? 'min(var(--t-amount-xl), 15vw)' : buf.length >= 4 ? 'min(var(--t-amount-xl), 19vw)' : 'min(var(--t-amount-xl), 23vw)' }}>
             <span className="rupee">₹</span>
             <AnimatePresence initial={false} mode="popLayout">
               <motion.span
