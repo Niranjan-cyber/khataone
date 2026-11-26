@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Unit tests (ledger maths)
+        run: npm test --if-present
+      - name: Typecheck and build
+        run: npm run build
+      - name: Impeccable design detector
+        run: npx --yes impeccable@4.11.1 detect src/ || test $? -eq 2
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+      - name: End-to-end flows
+        run: npm run e2e --if-present
