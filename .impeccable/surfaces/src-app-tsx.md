@@ -5,7 +5,7 @@ primary_target: "src/App.tsx"
 related_targets: []
 ---
 
-# Surface: KhataOne mobile app (all six screens)
+# Surface: Bahi mobile app (all six screens)
 
 Scope: the mobile-first app (Home, Customer picker, Credit entry, Ledger, Reminder, UPI collect). Mode: Operate.
 Audience: kirana owner behind a busy counter, one hand, budget Android. Task: record udhaar in under 10 s; read balances; remind; collect.

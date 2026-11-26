@@ -72,7 +72,7 @@ export function Showcase({ children }: { children: ReactNode }) {
               <span className="sc-mark" aria-hidden>
                 ₹
               </span>
-              KhataOne
+              Bahi <span className="sc-brand-dv">बही</span>
             </p>
             <h1 className="sc-h1">
               Less time on <em>hisaab</em>.
@@ -114,7 +114,7 @@ export function Showcase({ children }: { children: ReactNode }) {
         </section>
 
         <div className="sc-phone-col">
-          <div className="sc-phone" role="region" aria-label="KhataOne app prototype">
+          <div className="sc-phone" role="region" aria-label="Bahi app prototype">
             {children}
           </div>
           <div className="sc-controls">

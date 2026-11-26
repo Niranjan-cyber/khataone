@@ -60,7 +60,8 @@ export function Picker({ mode }: { mode: 'udhaar' | 'jama' }) {
         </div>
       </header>
 
-      <main className="scroll" style={{ padding: '0 var(--gutter) var(--s-6)' }}>
+      <main className="scroll">
+        <div className="page-ruled" style={{ paddingTop: 0 }}>
         {query ? (
           <section aria-label="Search results">
             {matches.length > 0 ? (
@@ -88,6 +89,7 @@ export function Picker({ mode }: { mode: 'udhaar' | 'jama' }) {
             <ul role="list" style={{ listStyle: 'none', margin: 0, padding: 0 }}>{rest.map(row)}</ul>
           </>
         )}
+        </div>
       </main>
 
       {/* Search and "new customer" live at the bottom, inside thumb reach. */}

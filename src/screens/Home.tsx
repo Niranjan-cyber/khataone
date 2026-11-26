@@ -1,5 +1,6 @@
 import { ArrowDownLeft, BookOpen, Plus, Settings2, ShoppingBag, UserPlus } from 'lucide-react'
-import { useState } from 'react'
+import { motion } from 'motion/react'
+import { useEffect, useState } from 'react'
 import { Balance, Mono, RollingAmount, Sheet, relDay } from '../components/bits'
 import { useToast } from '../components/Toast'
 import { LANGS, useT } from '../lib/i18n'
@@ -7,6 +8,9 @@ import { balanceOf, initials, lastOf, recentCustomers, todayTotals, totalOutstan
 import { formatINR } from '../lib/money'
 import { useRouter } from '../lib/router'
 import { useKhata } from '../store/khata'
+
+/** Last total the shopkeeper saw, so a returning Home can roll the figure from old to new. */
+let lastSeenTotal: number | null = null
 
 export function Home() {
   const { state, resetDemo } = useKhata()
@@ -18,6 +22,12 @@ export function Home() {
   const { total, owing } = totalOutstanding(state)
   const today = todayTotals(state.txs)
   const recent = recentCustomers(state).slice(0, 6)
+  const [shown, setShown] = useState(lastSeenTotal ?? total)
+  useEffect(() => {
+    const id = window.setTimeout(() => setShown(total), 180)
+    lastSeenTotal = total
+    return () => window.clearTimeout(id)
+  }, [total])
 
   return (
     <>
@@ -38,7 +48,7 @@ export function Home() {
           <p className="label" id="baaki-h">
             {t.totalBaaki} · {t.customersOwe(owing)}
           </p>
-          <RollingAmount value={total} className="amount-lg serif" />
+          <RollingAmount value={shown} className="amount-lg serif" />
           <div className="split">
             <div>
               <p className="label">{t.salesToday}</p>
@@ -61,7 +71,7 @@ export function Home() {
               return (
                 <li key={c.id} style={{ display: 'flex', alignItems: 'stretch' }}>
                   <button
-                    className={`row ${held === c.id ? 'held' : ''}`}
+                    className="row"
                     style={{ flex: 1 }}
                     onClick={() => go({ name: 'entry', mode: 'udhaar', cid: c.id })}
                     aria-label={`${t.addUdhaar}: ${c.name}, ${t.baaki} ${formatINR(bal)}`}
@@ -71,7 +81,18 @@ export function Home() {
                       {c.name}
                       <small>{last ? relDay(last.createdAt, t) : t.newCustomer}</small>
                     </span>
-                    <Balance value={bal} className="row-amt" />
+                    {held === c.id ? (
+                      <motion.span
+                        className="row-amt-wrap is-held"
+                        initial={{ clipPath: 'inset(0 100% 0 0)' }}
+                        animate={{ clipPath: 'inset(0 0% 0 0)' }}
+                        transition={{ duration: 0.26, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                      >
+                        <Balance value={bal} className="row-amt" />
+                      </motion.span>
+                    ) : (
+                      <Balance value={bal} className="row-amt" />
+                    )}
                   </button>
                   <button className="khata-btn" aria-label={`${t.khata}: ${c.name}`} onClick={() => go({ name: 'ledger', cid: c.id })}>
                     <BookOpen size={20} aria-hidden />

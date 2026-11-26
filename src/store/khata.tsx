@@ -2,7 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useReducer,
 import type { Customer, KhataState, Tx } from '../lib/ledger'
 import { seedState } from '../data/seed'
 
-const KEY = 'khataone.v1'
+const KEY = 'bahi.v1'
 
 type Action =
   | { type: 'add-tx'; tx: Tx }

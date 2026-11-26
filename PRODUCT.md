@@ -24,13 +24,13 @@ React + Vite + TypeScript, Motion for interaction, local persistence (localStora
 
 ## Product Purpose
 
-KhataOne replaces the paper udhaar notebook. It records credit and sales, keeps a ledger per customer, sends respectful payment reminders, and collects UPI payments.
+Bahi replaces the paper udhaar notebook. It records credit and sales, keeps a ledger per customer, sends respectful payment reminders, and collects UPI payments.
 
 Success: an existing customer's credit is recorded from the home screen in under 10 seconds with one hand, and every balance on every screen is correct.
 
 ## Positioning
 
-Built around one move: **customer → amount → save**, with no form, no confirmation screen and an undo afterwards. Competing khata apps put credit entry behind a customer page and a multi-field form. KhataOne puts recent customers and the keypad within thumb reach from the first screen.
+Built around one move: **customer → amount → save**, with no form, no confirmation screen and an undo afterwards. Competing khata apps put credit entry behind a customer page and a multi-field form. Bahi puts recent customers and the keypad within thumb reach from the first screen.
 
 Brand line: "One hand. One glance. One transaction." Headline: "Less time on hisaab. More time on dukaan."
 
@@ -63,7 +63,7 @@ Out of scope: inventory, analytics dashboards, chatbots, rewards, login.
 
 ## Brand Commitments
 
-- Name: KhataOne. Demo shop: Shree Ganesh Kirana.
+- Name: Bahi (renamed from KhataOne on 27 Nov 2026: "KhataOne" is used by an unrelated live product). Demo shop: Shree Ganesh Kirana.
 - Reminder tone: respectful and relationship-preserving ("Namaste Suresh ji … please pay whenever convenient"). Never collection-agency language.
 - Original identity. The references (Wise, Cash App, Square, CRED, Linear, Monzo, PhonePe Business) set the craft level only: no copied branding, assets or layouts.
 

@@ -69,7 +69,8 @@ export function Collect({ cid }: { cid: string }) {
         </div>
       </header>
 
-      <main className="scroll" style={{ padding: 'var(--s-4) var(--gutter) var(--s-6)' }}>
+      <main className="scroll">
+        <div className="page-ruled" style={{ display: 'grid', gap: 'var(--s-5)', alignContent: 'start' }}>
         <AnimatePresence mode="wait" initial={false}>
           {status === 'success' ? (
             <motion.section
@@ -177,6 +178,7 @@ export function Collect({ cid }: { cid: string }) {
             </motion.section>
           )}
         </AnimatePresence>
+        </div>
       </main>
 
       <div className="dock">

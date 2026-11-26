@@ -62,7 +62,7 @@ export function Ledger({ cid }: { cid: string }) {
                   )}
                   <li>
                     <motion.button
-                      className={`lrow ${tx.voidedAt ? 'is-void' : ''} ${fresh ? 'held' : ''}`}
+                      className={`lrow ${tx.voidedAt ? 'is-void' : ''} ${fresh ? 'is-fresh' : ''}`}
                       onClick={() => setOpen(tx)}
                       initial={fresh ? { clipPath: 'inset(0 100% 0 0)' } : false}
                       animate={{ clipPath: 'inset(0 0% 0 0)' }}

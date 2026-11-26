@@ -340,9 +340,9 @@ interface I18nCtx {
 const Ctx = createContext<I18nCtx | null>(null)
 
 export function I18nProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Lang>(() => (localStorage.getItem('khataone.lang') as Lang) || 'en')
+  const [lang, setLang] = useState<Lang>(() => (localStorage.getItem('bahi.lang') as Lang) || 'en')
   useEffect(() => {
-    localStorage.setItem('khataone.lang', lang)
+    localStorage.setItem('bahi.lang', lang)
     document.documentElement.lang = lang
   }, [lang])
   return <Ctx.Provider value={{ lang, t: DICTS[lang], setLang }}>{children}</Ctx.Provider>

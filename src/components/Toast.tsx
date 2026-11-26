@@ -30,10 +30,17 @@ export function ToastProvider({ children }: { children: ReactNode }) {
     timer.current = window.setTimeout(() => setToast(null), t.onUndo ? UNDO_MS : 3500)
   }, [])
 
+  // The changed balance stays marked until the shopkeeper has seen it: cleared by their next tap, not a timer.
   useEffect(() => {
     if (!held) return
-    const h = window.setTimeout(() => setHeld(null), 8000)
-    return () => window.clearTimeout(h)
+    let armed = false
+    const arm = window.setTimeout(() => (armed = true), 900)
+    const clear = () => armed && setHeld(null)
+    window.addEventListener('pointerdown', clear)
+    return () => {
+      window.clearTimeout(arm)
+      window.removeEventListener('pointerdown', clear)
+    }
   }, [held])
 
   return (
