@@ -439,7 +439,7 @@ button.row:active {
   color: var(--warn);
   border: 1px solid #e7c779;
   font-size: var(--t-xs);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.06em;
 }
 
@@ -542,7 +542,7 @@ button.row:active {
   padding: 0 var(--s-4);
   border-radius: var(--r-sm);
   color: var(--gold);
-  font-weight: 800;
+  font-weight: 700;
   font-size: var(--t-md);
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -958,7 +958,7 @@ button.row:active {
     gap: var(--s-1);
   }
   .quick .chip {
-    min-height: 44px;
+    min-height: var(--tap);
   }
   .key {
     height: 48px;

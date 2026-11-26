@@ -1,4 +1,4 @@
-import { Check, RotateCcw } from 'lucide-react'
+import { ArrowUpRight, Check, RotateCcw } from 'lucide-react'
 import { motion } from 'motion/react'
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { LANGS, useT } from '../lib/i18n'
@@ -167,7 +167,7 @@ export function Showcase({ children }: { children: ReactNode }) {
             </li>
           </ul>
           <a className="sc-case" href="/case-study.html" target="_blank" rel="noopener">
-            Read the one-page case study →
+            Read the one-page case study <ArrowUpRight size={18} aria-hidden />
           </a>
           <p className="sc-foot">
             Pixelcraft 2026 · DS-03 concept. All names, numbers and payments are fictional; UPI and messaging are simulated.

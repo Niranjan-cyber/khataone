@@ -1,4 +1,4 @@
-import { ArrowDownLeft, BookOpen, Plus, Settings2, ShoppingBag, UserPlus } from 'lucide-react'
+import { ArrowDownLeft, BookOpen, ChevronRight, Plus, Settings2, ShoppingBag, UserPlus } from 'lucide-react'
 import { motion } from 'motion/react'
 import { useEffect, useState } from 'react'
 import { Balance, Mono, RollingAmount, Sheet, relDay } from '../components/bits'
@@ -104,7 +104,7 @@ export function Home() {
           </ul>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 'var(--s-2)' }}>
             <button className="link" onClick={() => go({ name: 'pick', mode: 'udhaar' })}>
-              {t.allCustomers(state.customers.length)} →
+              {t.allCustomers(state.customers.length)} <ChevronRight size={18} aria-hidden />
             </button>
             <button className="link" onClick={() => go({ name: 'pick', mode: 'udhaar' })} style={{ gap: 6 }}>
               <UserPlus size={18} aria-hidden /> {t.newCustomer}
