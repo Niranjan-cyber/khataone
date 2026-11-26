@@ -1,0 +1,79 @@
+/* KhataOne · Bahi world tokens. Every colour, size and duration in the app comes from here. */
+:root {
+  /* Bookcloth */
+  --cloth: #7e1a1a;
+  --cloth-deep: #5f1212;
+  --cloth-ink: #fbefd9;
+  --cloth-muted: #ecc9a6;
+  --gold: #e2a11b;
+  --gold-deep: #b97f0c;
+
+  /* Ledger page */
+  --page: #fbf6ec;
+  --page-2: #f4ecdc;
+  --rule: #e6d9c4;
+  --rule-strong: #cdbba2;
+  --margin-red: #c95a4a;
+  --ink: #1f1a17;
+  --ink-2: #5e5148;
+  --ink-3: #75685d;
+
+  /* Money semantics: always paired with a word and an arrow icon */
+  --udhaar: #9a2d22;
+  --udhaar-wash: #f6dcd5;
+  --jama: #2f6b45;
+  --jama-wash: #d9eadc;
+  --sale: #4b4f7a;
+  --warn: #8a5a00;
+  --warn-wash: #fbe9bf;
+  --focus: #1d5fd1;
+
+  /* Type */
+  --f-serif: 'Martel', 'Noto Serif Devanagari', Georgia, serif;
+  --f-sans: 'Hind', 'Noto Sans Devanagari', system-ui, sans-serif;
+  --t-xs: 0.8125rem; /* 13 */
+  --t-sm: 0.875rem; /* 14 */
+  --t-md: 1rem; /* 16 */
+  --t-lg: 1.125rem; /* 18 */
+  --t-xl: 1.3125rem; /* 21 */
+  --t-2xl: 1.625rem; /* 26 */
+  --t-amount-md: 1.5rem;
+  --t-amount-lg: 3.75rem; /* 60 */
+  --t-amount-xl: 5.5rem; /* 88 */
+
+  /* Space: 4px base */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-10: 40px;
+  --gutter: 20px;
+
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 18px;
+
+  --tap: 48px;
+  --tap-lg: 60px;
+
+  --shadow-sheet: 0 -8px 30px rgba(55, 20, 10, 0.18);
+  --shadow-toast: 0 8px 24px rgba(31, 26, 23, 0.28);
+
+  /* Motion */
+  --d-press: 90ms;
+  --d-fast: 160ms;
+  --d-mid: 240ms;
+  --d-slow: 380ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --z-dock: 10;
+  --z-sheet: 40;
+  --z-toast: 50;
+
+  --safe-b: env(safe-area-inset-bottom, 0px);
+  --safe-t: env(safe-area-inset-top, 0px);
+}

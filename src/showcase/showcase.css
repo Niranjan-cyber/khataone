@@ -1,0 +1,259 @@
+/* Desktop presentation: the closed red khata is the page, the phone is the open book. */
+.sc {
+  min-height: 100%;
+  background-color: var(--cloth);
+  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03) 0 2px, transparent 2px 6px),
+    repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 0 1px, transparent 1px 5px);
+  color: var(--cloth-ink);
+  overflow: auto;
+  height: 100%;
+}
+.sc ::selection {
+  background: var(--gold);
+  color: var(--ink);
+}
+.sc-wrap {
+  max-width: 1480px;
+  margin: 0 auto;
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: minmax(360px, 1fr) auto minmax(260px, 340px);
+  gap: clamp(32px, 4vw, 72px);
+  align-items: center;
+  padding: 24px clamp(32px, 4vw, 64px);
+}
+.sc-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--f-serif);
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: 0.01em;
+}
+.sc-mark {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  background: var(--page);
+  color: var(--cloth);
+  font-weight: 900;
+  box-shadow: inset 0 -3px 0 var(--gold);
+}
+.sc-h1 {
+  font-family: var(--f-serif);
+  font-weight: 900;
+  font-size: clamp(2.4rem, 3.7vw, 3.9rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-top: 22px;
+  text-wrap: balance;
+}
+.sc-h1 em {
+  font-style: normal;
+  color: var(--gold);
+}
+.sc-lede {
+  margin-top: 16px;
+  font-size: 1.08rem;
+  line-height: 1.55;
+  color: var(--cloth-muted);
+  max-width: 34em;
+}
+.sc-task {
+  margin-top: 26px;
+  border-top: 6px double var(--gold);
+  padding-top: 22px;
+}
+.sc-h2 {
+  font-family: var(--f-serif);
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+.sc-steps {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: grid;
+  gap: 6px;
+}
+.sc-steps li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.02rem;
+  color: var(--cloth-muted);
+  transition: color var(--d-mid);
+}
+.sc-tick {
+  width: 28px;
+  height: 28px;
+  flex: none;
+  border-radius: 50%;
+  border: 1.5px solid rgba(236, 201, 166, 0.5);
+  display: grid;
+  place-items: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: background var(--d-mid) var(--ease-out), border-color var(--d-mid);
+}
+.sc-steps li.is-done {
+  color: var(--cloth-ink);
+}
+.sc-steps li.is-done .sc-tick {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--ink);
+}
+.sc-timer {
+  margin-top: 18px;
+  font-size: 1.02rem;
+  color: var(--cloth-ink);
+}
+.sc-timer b {
+  font-family: var(--f-serif);
+  font-size: 1.5rem;
+  color: var(--gold);
+}
+.sc-timer small {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--cloth-muted);
+  margin-top: 4px;
+}
+
+.sc-phone-col {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+}
+.sc-phone {
+  width: 410px;
+  height: min(864px, calc(100vh - 110px));
+  min-height: 640px;
+  border-radius: 44px;
+  overflow: hidden;
+  position: relative;
+  border: 10px solid #1b1210;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 30px 70px rgba(30, 6, 4, 0.55), 0 8px 18px rgba(30, 6, 4, 0.35);
+  background: var(--page);
+  color: var(--ink);
+  isolation: isolate;
+  transform: translateZ(0);
+}
+.sc-phone .cloth {
+  padding-top: 26px;
+}
+.sc-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.sc-seg {
+  border-color: rgba(236, 201, 166, 0.45);
+}
+.sc-seg button {
+  min-height: 40px;
+  padding: 0 14px;
+  color: var(--cloth-ink);
+  font-size: 0.92rem;
+}
+.sc-seg button + button {
+  border-left-color: rgba(236, 201, 166, 0.45);
+}
+.sc-seg button[aria-pressed='true'] {
+  background: var(--page);
+  color: var(--cloth);
+}
+.sc-reset {
+  min-height: 40px;
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  padding: 0 14px;
+  border-radius: var(--r-md);
+  border: 1.5px solid rgba(236, 201, 166, 0.45);
+  color: var(--cloth-ink);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+.sc-reset:hover,
+.sc-seg button:hover:not([aria-pressed='true']) {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.sc-h3 {
+  font-family: var(--f-serif);
+  font-size: 1.05rem;
+  font-weight: 800;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(236, 201, 166, 0.3);
+}
+.sc-h3 + * {
+  margin-top: 6px;
+}
+.sc-screens {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+}
+.sc-screens button {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  min-height: 42px;
+  text-align: left;
+  color: var(--cloth-ink);
+  font-size: 1rem;
+  border-bottom: 1px dashed rgba(236, 201, 166, 0.22);
+  transition: padding var(--d-fast) var(--ease-out), color var(--d-fast);
+}
+.sc-screens button:hover {
+  padding-left: 6px;
+  color: var(--gold);
+}
+.sc-screens .num {
+  font-family: var(--f-serif);
+  font-weight: 800;
+  color: var(--gold);
+  width: 14px;
+}
+.sc-diff {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 14px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--cloth-muted);
+}
+.sc-diff b {
+  color: var(--cloth-ink);
+  display: block;
+}
+.sc-foot {
+  margin-top: 24px;
+  font-size: 0.8rem;
+  color: var(--cloth-muted);
+  opacity: 0.85;
+}
+
+@media (max-width: 1240px) {
+  .sc-wrap {
+    grid-template-columns: 1fr auto;
+  }
+  .sc-right {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 48px;
+  }
+  .sc-right .sc-foot {
+    grid-column: 1 / -1;
+  }
+}
